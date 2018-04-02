@@ -138,7 +138,7 @@ public ResponseEntity<Iterable<Poll>> getAllPolls() {
 * Launch the [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en) app and enter the URI `http://localhost:8080/polls` and hit Send.
 * Because we don’t have any polls created yet, this command should result in an empty collection.
 * If your application cannot run because something is occupying a port, use this command with the respective port number specified:
-	* ``kill -kill `lsof -t -i tcp:8080```
+	* ``kill -kill `lsof -t -i tcp:8080` ``
 
 
 
