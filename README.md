@@ -21,6 +21,7 @@
 			* configures the way of increment of the specified `column(field)`
 		* `@Column(name = "OPTION_ID")`
 			* specifies mapped column for a persistent property or field
+			* without `@Column` specified, the framework assumes the field's variable-name is the persistent property name.
 
 * `Option` has a `value` instance variable of type `String`
 	* `value` should be `annotated` with
