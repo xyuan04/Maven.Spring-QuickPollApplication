@@ -135,8 +135,10 @@ public ResponseEntity<Iterable<Poll>> getAllPolls() {
 * Ensure that the `start-class` tag in your `pom.xml` encapsulates `io.zipcoder.springdemo.QuickPollApplication`
 * Open a command line and navigate to the project's root directory and run this command:
 	* `mvn spring-boot:run`
-* Launch the [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en) app in your Chrome browser and enter the URL `http://localhost:8080/polls` and hit Send.
+* Launch the [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en) app and enter the URI `http://localhost:8080/polls` and hit Send.
 * Because we don’t have any polls created yet, this command should result in an empty collection.
+* If your application cannot run because something is occupying a port, use this command with the respective port number specified:
+	* ``kill -kill `lsof -t -i tcp:8080``
 
 
 
