@@ -218,7 +218,7 @@ public ResponseEntity<?> deletePoll(@PathVariable Long pollId) {
 ```
 
 
-### Part 3.1.8 - Test
+### Part 3.1.8 - Test Poll Creating Capabilities
 
 * Restart the QuickPoll application.
 * Use Postman to execute a `POST` to `http://localhost:8080/polls/` whose request body is the `JSON` object below.
