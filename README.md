@@ -236,6 +236,29 @@ public ResponseEntity<?> deletePoll(@PathVariable Long pollId) {
 	]
 }
 ```
+* Ensure the the data has been persisted by executing a `GET` to `http://localhost:8080/polls/1`
+* Upon execution, you should receive this message body.
+
+```json
+{
+    "id": 1,
+    "question": "What's the best netflix original?",
+    "options": [
+        {
+            "id": 1
+        },
+        {
+            "id": 2
+        },
+        {
+            "id": 3
+        },
+        {
+            "id": 4
+        }
+    ]
+}
+```
 
 
 ## Part 3.2 - Create class `VoteController`
