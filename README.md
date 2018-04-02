@@ -229,9 +229,9 @@ public ResponseEntity<?> deletePoll(@PathVariable Long pollId) {
 
 ```JSON
 {
-    "id": 1,
-        "question": "What's the best netflix original?",
-        "options": [
+	"id": 1,
+	"question": "What's the best netflix original?",
+	"options": [
 	    { "value": "Black Mirror" },
 	    { "value": "Stranger Things" },
 	    { "value": "Orange is the New Black"},
