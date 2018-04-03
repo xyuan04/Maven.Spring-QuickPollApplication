@@ -327,7 +327,7 @@ public interface VoteRepository extends CrudRepository<Vote, Long> {
 
 
 ```java
-@RequestMapping(value="/polls/{pollId}/votes", method=RequestMethod.GET)
+@RequestMapping(value="/polls/votes", method=RequestMethod.GET)
 public Iterable<Vote> getAllVotes() {
 	return voteRepository.findAll();
 }
@@ -336,7 +336,7 @@ public Iterable<Vote> getAllVotes() {
 * Create a `getVote` method in the `VoteController`
 
 ```java
-@RequestMapping(value="/polls/votes", method=RequestMethod.GET)
+@RequestMapping(value="/polls/{pollId}/votes", method=RequestMethod.GET)
 public Iterable<Vote> getVote(@PathVariable Long pollId) {
 	return voteRepository.findById(pollId);
 }
