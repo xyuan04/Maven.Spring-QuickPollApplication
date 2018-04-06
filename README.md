@@ -250,16 +250,20 @@ public ResponseEntity<?> deletePoll(@PathVariable Long pollId) {
     "question": "What's the best netflix original?",
     "options": [
         {
-            "id": 1
+            "id": 1,
+            "value": "Stranger Things"
         },
         {
-            "id": 2
+            "id": 2,
+            "value": "The Get Down"
         },
         {
-            "id": 3
+            "id": 3,
+            "value": "Black Mirror"
         },
         {
-            "id": 4
+            "id": 4,
+            "value": "Orange is the New Black"
         }
     ]
 }
