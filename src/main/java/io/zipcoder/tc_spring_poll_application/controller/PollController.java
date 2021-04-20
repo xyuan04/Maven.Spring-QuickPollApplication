@@ -3,6 +3,7 @@ package io.zipcoder.tc_spring_poll_application.controller;
 import io.zipcoder.tc_spring_poll_application.domain.Poll;
 import io.zipcoder.tc_spring_poll_application.repositories.PollRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -29,13 +30,14 @@ public class PollController {
     public ResponseEntity<?> createPoll(@RequestBody Poll poll) {
         poll = pollRepository.save(poll);
 
+        HttpHeaders headers = new HttpHeaders();
         URI newPollUri = ServletUriComponentsBuilder
                 .fromCurrentRequest()
                 .path("/{id}")
                 .buildAndExpand(poll.getId())
                 .toUri();
-
-        return new ResponseEntity<>(newPollUri, HttpStatus.CREATED);
+        headers.setLocation(newPollUri);
+        return new ResponseEntity<>(headers, HttpStatus.CREATED);
     }
 
     @RequestMapping(value="/polls/{pollId}", method=RequestMethod.GET)
